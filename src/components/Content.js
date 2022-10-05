@@ -18,3 +18,7 @@ const Content = () => {
 }
 
 export default Content;
+
+const Container = styled.div`
+    background-color:#DBEFE1;
+`
