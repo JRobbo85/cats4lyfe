@@ -1,7 +1,7 @@
 import styled from 'styled-components' 
 
 
-const Cat = () => {
+const Cat = ({name}) => {
 
 
 
@@ -9,7 +9,7 @@ const Cat = () => {
         <Container>
             <Image src ={require('./assets/Cats4Lyf_logo.png')} />
             <Cat_Details>
-                <p>Breed:</p>
+                <p>Breed: {name}</p>
                 <p>Temperament:</p>
                 <p>Origin: </p>
             </ Cat_Details>
