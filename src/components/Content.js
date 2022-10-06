@@ -3,14 +3,14 @@ import { useState, useEffect } from "react"
 
 const Content = () => {
 const [counter, setCounter] = useState(0)
-const [data, setData] = useState()  
+const [catData, setCatData] = useState()  
 
 
 useEffect(() => {
     async function fetchCatData() {
         const response = await fetch("https://api.thecatapi.com/v1/breeds/?api_key=live_Tt7xdd37BnW9MoqD2zlLy1dg8C9qPlKLdxNXGoNylalEBw39TaM7CbOYfkfhdSo1")
         const data = await response.json()
-        console.log(data)
+        setCatData(data)
     } 
     fetchCatData()
 },[])
