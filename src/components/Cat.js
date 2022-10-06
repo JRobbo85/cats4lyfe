@@ -1,20 +1,20 @@
 import styled from 'styled-components' 
-
+import {faker} from '@faker-js/faker'
 
 const Cat = ({entireCat}) => {
 
 
-
     return (
         <Container>
-            <Image src ={entireCat.image.url} />
+            {/* <Image src ={entireCat.image.url} /> */}
+            <Image src ={require('./assets/Cats4Lyf_logo.png')} />
             <Cat_Details>
                 <p>Breed: {entireCat.name}</p>
                 <p>Lifespan: {entireCat.life_span} years</p>
                 <p>Origin: {entireCat.origin}</p>
             </ Cat_Details>
             <Price_Details>
-                <p>Price:</p>
+                <p>Price:{faker.commerce.price(50, 100, 2, '£')}</p>
                 <button>Add To cart</button>
             </Price_Details>
         </Container>
