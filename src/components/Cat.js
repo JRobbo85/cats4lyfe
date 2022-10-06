@@ -1,17 +1,17 @@
 import styled from 'styled-components' 
 
 
-const Cat = ({name}) => {
+const Cat = ({entireCat}) => {
 
 
 
     return (
         <Container>
-            <Image src ={require('./assets/Cats4Lyf_logo.png')} />
+            <Image src ={entireCat.image.url} />
             <Cat_Details>
-                <p>Breed: {name}</p>
-                <p>Temperament:</p>
-                <p>Origin: </p>
+                <p>Breed: {entireCat.name}</p>
+                <p>Lifespan: {entireCat.life_span} years</p>
+                <p>Origin: {entireCat.origin}</p>
             </ Cat_Details>
             <Price_Details>
                 <p>Price:</p>
