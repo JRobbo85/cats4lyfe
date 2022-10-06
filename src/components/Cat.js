@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import {faker} from '@faker-js/faker'
 
 const Cat = ({entireCat}) => {
-
+const value = faker.commerce.price(50, 100, 2, '£')
 
     return (
         <Container>
@@ -14,8 +14,8 @@ const Cat = ({entireCat}) => {
                 <p>Origin: {entireCat.origin}</p>
             </ Cat_Details>
             <Price_Details>
-                <p>Price:{faker.commerce.price(50, 100, 2, '£')}</p>
-                <button>Add To cart</button>
+                <p>Price: {value}</p>
+                <Button>Add To cart</Button>
             </Price_Details>
         </Container>
     )
@@ -65,8 +65,13 @@ font-family: 'Poppins', sans-serif;
 flex-direction:column;
 margin-left:1vw;
 margin-top:7vh;
-border-style:solid;
-border-weight:2px;
-border-color:green;
+
+`
+
+const Button = styled.button `
+    background-color:transparent;
+    border: 2px solid black;
+    padding: 1vw;
+    
 `
 
