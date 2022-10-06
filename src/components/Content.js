@@ -10,13 +10,16 @@ useEffect(() => {
     async function fetchCatData() {
         const response = await fetch("https://api.thecatapi.com/v1/breeds/?api_key=live_Tt7xdd37BnW9MoqD2zlLy1dg8C9qPlKLdxNXGoNylalEBw39TaM7CbOYfkfhdSo1")
         const data = await response.json()
-        setCatData(data)
+        setCatData([...data])
     } 
     fetchCatData()
-},[])
+}, [] )
 
     return (
         <div>
+            {catData.map((cat, index) => (
+                <p key={index}>{cat.name}</p>
+            ))}
             {/* <Cat name={data[0 + (counter)].name}/>
             <Cat name={data[0 + (counter + 1)].name}/>
             <Cat name={data[0 + (counter + 2)].name}/> */}
