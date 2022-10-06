@@ -2,7 +2,6 @@ import Cat from "./Cat"
 import { useState, useEffect } from "react"
 
 const Content = () => {
-const [counter, setCounter] = useState(0)
 const [catData, setCatData] = useState()  
 
 
@@ -18,11 +17,8 @@ useEffect(() => {
     return (
         <div>
             {catData.map((cat, index) => (
-                <p key={index}>{cat.name}</p>
+                <Cat key={index} name={cat.name} />
             ))}
-            {/* <Cat name={data[0 + (counter)].name}/>
-            <Cat name={data[0 + (counter + 1)].name}/>
-            <Cat name={data[0 + (counter + 2)].name}/> */}
             <button>More Cats!</button>
         </div>
     )
