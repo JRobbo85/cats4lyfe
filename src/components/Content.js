@@ -1,7 +1,7 @@
 import Cat from "./Cat"
 import { useState, useEffect } from "react"
 
-const Content = ({setBasket , basket}) => {
+const Content = ({setBasket , basket, setShow, show}) => {
 const [catData, setCatData] = useState([])  
 
 
@@ -15,12 +15,16 @@ useEffect(() => {
     fetchCatData()
 }, [] )
 
-    return (
+     return (
         <div>
-            {catData.map((cat, index) => (
-                <Cat key={index} entireCat={cat} setBasket={setBasket} basket={basket}/>
-            ))}
-
+            <div>
+                {catData.map((cat, index) => (
+                    <Cat key={index} entireCat={cat} setBasket={setBasket} basket={basket}/>
+                ))}
+            </div>
+            <div>
+                <img src={require("./assets/checkout.png")} onClick={ () => {setShow(!show)}}/>
+            </div>
         </div>
     )
 }

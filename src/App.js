@@ -16,7 +16,7 @@ function App() {
   return (
    <Div>
     <Header />
-    <Content setBasket = {setBasket} basket={basket} />
+    <Content setBasket = {setBasket} basket={basket} setShow={setShow} show={show}/>
     <Cart basket={basket} />
     </Div>
   );
