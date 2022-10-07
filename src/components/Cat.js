@@ -6,7 +6,6 @@ const value = faker.commerce.price(50, 100, 2, '£')
 
     return (
         <Container>
-            {/* <Image src ={entireCat.image.url} /> */}
             <Image src ={require('./assets/Cats4Lyf_logo.png')} />
             <Cat_Details>
                 <p>Breed: {entireCat.name}</p>
@@ -71,7 +70,9 @@ margin-top:7vh;
 const Button = styled.button `
     background-color:transparent;
     border: 2px solid black;
-    padding: 1vw;
+    border-radius: 2em;
+    font-size: medium;
+    padding-right: 1em;
     
 `
 
