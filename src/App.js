@@ -2,7 +2,8 @@ import Content from './components/Content'
 
 function App() {
   return (
-    <Content/>
+
+    <><Header /><Content /><Cart /></>
   );
 }
 
