@@ -1,9 +1,16 @@
+import Header from './components/Header'
 import Content from './components/Content'
+import Cart from './components/Cart'
+
 
 function App() {
   return (
 
-    <><Header /><Content /><Cart /></>
+    <div>
+      <Header />
+      <Content />
+      <Cart />
+    </div>
   );
 }
 
