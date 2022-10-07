@@ -1,7 +1,7 @@
 import Cat from "./Cat"
 import { useState, useEffect } from "react"
 
-const Content = () => {
+const Content = ({setBasket , basket}) => {
 const [catData, setCatData] = useState([])  
 
 
@@ -18,9 +18,9 @@ useEffect(() => {
     return (
         <div>
             {catData.map((cat, index) => (
-                <Cat key={index} entireCat={cat} />
+                <Cat key={index} entireCat={cat} setBasket={setBasket} basket={basket}/>
             ))}
-            <button>More Cats!</button>
+
         </div>
     )
 }
