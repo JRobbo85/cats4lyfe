@@ -31,9 +31,14 @@ const addToBasket = () => {
             {entireCat.image && <Image src = {entireCat.image.url} />}
 
             <Cat_Details>
+                <Details1>
                 <p>Breed: {entireCat.name}</p>
                 <p>Lifespan: {entireCat.life_span} years</p>
                 <p>Origin: {entireCat.origin}</p>
+                </Details1>
+                <Details2>
+                    <p>Description: {entireCat.description}</p>
+                </Details2>
             </ Cat_Details>
             <Price_Details>
                 <p>Price: £{value}</p>
@@ -52,9 +57,17 @@ const Container = styled.div`
     width: 70vw;
     height: 20vh;
     margin-left:15vw;
-    margin-top:10vh;
+    margin-top:6vh;
     margin-right:3vw;
     box-shadow:3px 3px black;
+    position: relative;
+    top: 0;
+    transition: top ease 0.5s;
+
+
+    &:hover {
+        top: -10px; 
+        box-shadow:3px 5px black;
 `
 
 const Image = styled.img`
@@ -73,16 +86,14 @@ const Cat_Details = styled.div`
     font-family: 'Poppins', sans-serif;
     font-weight:bold;
     color:#dbefe1;
-    flex-direction:column;
+    flex-direction:row;
     margin-left:2vw;
     font-size:1.3em;
-    line-height:1vh;
-    border-style:ridge;
-    border-weight:2px;
-    border-color:gray;
+    line-height:2vh;
+    justify-content:space-between;
     width:73%;
     padding:10px;
-    text-shadow: 2px 2px black;
+    text-shadow: 1.5px 1.5px black;
 `
 
 const Price_Details = styled.div `
@@ -104,10 +115,22 @@ const Button = styled.button `
     text-shadow: 2px 2px black;
     background-color:transparent;
     border: 2px solid black;
-
+    box-shadow:2px 2px black;
     border-radius: 2em;
     font-size: medium;
     padding-right: 1em;
+ 
 
 `
 
+const Details1 = styled.div `
+        display:flex;
+        flex-direction:column;
+`
+
+const Details2 = styled.div `
+        display:flex;
+        width: 70%;
+        line-height: 2.5vh;
+        margin-left:1vw;
+`

@@ -32,5 +32,8 @@ export default Content;
 const Div = styled.div `
     background-color:#DBEFE1;
     margin-right:1vw;
+
+    
+    }
 `
 
