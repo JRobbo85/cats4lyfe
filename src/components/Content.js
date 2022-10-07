@@ -20,6 +20,7 @@ useEffect(() => {
             {catData.map((cat, index) => (
                 <Cat key={index} entireCat={cat} />
             ))}
+            <button>More Cats!</button>
         </div>
     )
 }
