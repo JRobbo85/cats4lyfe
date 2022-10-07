@@ -1,5 +1,6 @@
 import Cat from "./Cat"
 import { useState, useEffect } from "react"
+import styled from "styled-components";
 
 const Content = ({setBasket , basket, setShow, show}) => {
 const [catData, setCatData] = useState([])  
@@ -30,3 +31,9 @@ useEffect(() => {
 }
 
 export default Content;
+
+
+const Div = styled.div `
+    background-color:#DBEFE1;
+    margin-right:1vw;
+`
