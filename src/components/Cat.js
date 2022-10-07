@@ -43,6 +43,7 @@ const addToBasket = () => {
             <Price_Details>
                 <p>Price: £{value}</p>
                 <Button onClick={addToBasket}>Add To cart</Button>
+
             </Price_Details>
         </Container>
     )
@@ -68,22 +69,26 @@ const Container = styled.div`
     &:hover {
         top: -10px; 
         box-shadow:3px 5px black;
+
 `
 
 const Image = styled.img`
     width: 8vw;
     height:8vw;
     margin-left:1.5vh;
+
     border-style:ridge;
     border-color:gray;
     border-weight:3px;
     box-shadow:2px 2px black;
+
 
 `
 
 const Cat_Details = styled.div`
     display:flex;
     font-family: 'Poppins', sans-serif;
+
     font-weight:bold;
     color:#dbefe1;
     flex-direction:row;
@@ -94,6 +99,7 @@ const Cat_Details = styled.div`
     width:73%;
     padding:10px;
     text-shadow: 1.5px 1.5px black;
+
 `
 
 const Price_Details = styled.div `
@@ -134,3 +140,4 @@ const Details2 = styled.div `
         line-height: 2.5vh;
         margin-left:1vw;
 `
+

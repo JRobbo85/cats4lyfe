@@ -1,8 +1,10 @@
+
 import Header from './components/Header'
 import Content from './components/Content'
 import Cart from './components/Cart'
 import styled from 'styled-components' 
 import {useState} from 'react'
+
 
 
 function App() {
@@ -12,11 +14,13 @@ function App() {
 
 
   return (
+
     <Div>
       <Header />
       <Content setBasket = {setBasket} basket={basket} />
       <Cart basket={basket} />
     </Div>
+
   );
 }
 

@@ -1,8 +1,10 @@
 import Cat from "./Cat"
 import { useState, useEffect } from "react"
+
 import styled from "styled-components";
 
 const Content = ({setBasket , basket}) => {
+
 const [catData, setCatData] = useState([])  
 
 
@@ -17,6 +19,7 @@ useEffect(() => {
 }, [] )
 
     return (
+
         <Div>
             {catData.map((cat, index) => (
                 <Cat key={index} entireCat={cat} setBasket={setBasket} basket={basket}/>
@@ -36,4 +39,5 @@ const Div = styled.div `
     
     }
 `
+
 
