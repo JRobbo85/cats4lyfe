@@ -31,31 +31,35 @@ const Container = styled.div`
     height: 20vh;
     margin-left:15vw;
     margin-top:10vh;
-    
+    box-shadow:3px 3px black;
 `
 
 const Image = styled.img`
     width: 8vw;
     height:8vw;
     margin-left:1.5vh;
-    border-style:solid;
-    border-weight:2px;
-    
+    border-style:ridge;
+    border-color:gray;
+    border-weight:3px;
+    box-shadow:2px 2px black;
 
 `
 
 const Cat_Details = styled.div`
     display:flex;
     font-family: 'Poppins', sans-serif;
+    font-weight:bold;
     color:#dbefe1;
     flex-direction:column;
     margin-left:2vw;
-    font-size:1.2em;
+    font-size:1.3em;
     line-height:1vh;
-    border-style:solid;
+    border-style:ridge;
     border-weight:2px;
-    border-color:red;
+    border-color:gray;
     width:73%;
+    padding:10px;
+    text-shadow: 2px 2px black;
 `
 
 const Price_Details = styled.div `
@@ -65,13 +69,19 @@ font-family: 'Poppins', sans-serif;
 flex-direction:column;
 margin-left:1vw;
 margin-top:7vh;
+text-shadow: 2px 2px black;
+font-weight:bold;
 
 `
 
 const Button = styled.button `
+    font-family: 'Poppins', sans-serif;
+    color:#dbefe1;
+    
+    text-shadow: 2px 2px black;
     background-color:transparent;
     border: 2px solid black;
-    padding: 1vw;
+    padding: 0.2vw;
     
 `
 
