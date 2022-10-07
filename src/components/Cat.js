@@ -27,7 +27,9 @@ const addToBasket = () => {
 
     return (
         <Container>
+
             {entireCat.image && <Image src = {entireCat.image.url} />}
+
             <Cat_Details>
                 <p>Breed: {entireCat.name}</p>
                 <p>Lifespan: {entireCat.life_span} years</p>
@@ -100,7 +102,10 @@ const Button = styled.button `
     text-shadow: 2px 2px black;
     background-color:transparent;
     border: 2px solid black;
-    padding: 0.2vw;
-    
+
+    border-radius: 2em;
+    font-size: medium;
+    padding-right: 1em;
+
 `
 
