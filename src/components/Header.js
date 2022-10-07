@@ -28,13 +28,10 @@ position: fixed;
 background-color:#1d617a;
 `
 
-
 const Img = styled.img`
-heigth: 100px;
-width: 100px;
-padding-top: 50px;
-padding-left: 50px;
-padding-right: 50px;
+heigth: 17vh;
+width: 17vh;
+padding: 5vh;
 display: flex;
 justify-content: center;
 `
