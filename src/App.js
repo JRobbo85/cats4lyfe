@@ -1,7 +1,5 @@
 import Header from './components/Header'
 import Content from './components/Content'
-
-import Header from './components/Header'
 import Cart from './components/Cart'
 import styled from 'styled-components' 
 import {useState} from 'react'
