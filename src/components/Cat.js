@@ -1,8 +1,29 @@
 import styled from 'styled-components' 
 import {faker} from '@faker-js/faker'
+import {useEffect, useState} from 'react'
 
-const Cat = ({entireCat}) => {
-const value = faker.commerce.price(50, 100, 2, '£')
+
+
+
+const Cat = ({entireCat, setBasket, basket}) => {
+    const [value, setValue] = useState(0)
+
+    useEffect (() => {
+        setValue(faker.commerce.price(50, 100, 2)) 
+
+}, [])
+    
+
+
+const addToBasket = () => {
+    const temp = [...basket]
+    entireCat.price = value
+    console.log(entireCat)
+    temp.push(entireCat)
+    setBasket(temp)
+    
+}
+
 
     return (
         <Container>
@@ -15,8 +36,8 @@ const value = faker.commerce.price(50, 100, 2, '£')
                 <p>Origin: {entireCat.origin}</p>
             </ Cat_Details>
             <Price_Details>
-                <p>Price: {value}</p>
-                <Button>Add To cart</Button>
+                <p>Price: £{value}</p>
+                <Button onClick={addToBasket}>Add To cart</Button>
             </Price_Details>
         </Container>
     )
@@ -78,7 +99,6 @@ font-weight:bold;
 const Button = styled.button `
     font-family: 'Poppins', sans-serif;
     color:#dbefe1;
-    
     text-shadow: 2px 2px black;
     background-color:transparent;
     border: 2px solid black;
